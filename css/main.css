@@ -116,7 +116,7 @@ header {
     
 }
 .video-link {
-    
+    font-family: 'Oswald', sans-serif;
     width: 48%;
     background: rgba(0,200,0,1);
     color: #fff;
@@ -127,7 +127,7 @@ header {
     padding: .5em;
     margin: .25em 1em 1em 1em;
     font-weight: bold;
-    text-transform:uppercase;
+    
     text-shadow:1px 1px 1px rgba(40,40,40,.9);
     border-radius: .15em;
     box-shadow: 1px 1px 1px rgba(100,100,100,1);
@@ -135,6 +135,7 @@ header {
 .video-link:hover,.video-link:focus {
     background: rgba(0,100,0,1);
     box-shadow: inset 0px 1px 1px rgba(255,255,255,.8);
+    text-decoration:underline;
 }
 
 nav {
@@ -168,6 +169,7 @@ background:url('../img/next-arrow.png')center center no-repeat rgba(255,255,255,
     color:rgba(30,100,200,1);
 }
 .video-speaker {
+    font-family: 'Oswald', sans-serif;
     text-align:right;
     color:rgba(200,30,30,1);
     margin: 0 .5em 0 0;
@@ -177,7 +179,15 @@ background:url('../img/next-arrow.png')center center no-repeat rgba(255,255,255,
 width: 42%;
 float: left;
 }
-
+.video-counter {
+    color:#aaa;
+    font-family: 'Oswald', sans-serif;
+    position:absolute;
+    width: 100%;
+    padding: .5em;
+    top: 2em;
+    text-align:center;
+}
 
 
 

@@ -13,7 +13,8 @@ ted.build = function(obj, inc){
   var html = $('.template').clone().removeClass('template').attr('id','video-'+inc);
   $('.video-container').append(html);
   var _v = $('#video-'+inc);
-  _v.addClass('video-item').attr('data-inc',inc).children('.video-image').attr('src', img)
+  _v.addClass('video-item').attr('data-inc',inc)
+    .children('.video-image').attr('src', img)
     .siblings('.video-title').text(title)
     .siblings('.video-speaker').text(speaker)
     .siblings('.video-description').text(description)
@@ -42,6 +43,7 @@ ted.slide = function(moveScreen, showScreen){
         background: 'url("'+bg+'") top left no-repeat',
         backgroundSize : '100%',
         transition: 'background 0.5s linear'});
+      $('#current').text(parseInt($(showScreen).attr('data-inc'))+1);
       $(showScreen).addClass('active').delay(500).animate({
             left: ted.getX()}, 1000);
 }
@@ -71,7 +73,9 @@ $(function(){
       ted.build(obj[i],i)
     }
     $('#video-0').addClass('active').addClass('first');
-    ted.slide('',$('#video-0'))
+    ted.slide('',$('#video-0'));
+    $('#current').text(1);
+    $('#total').text($('.video-item').length);
     $('.video-item:last-child').addClass('last');
   });
   $('nav a').on('click', function(e){
