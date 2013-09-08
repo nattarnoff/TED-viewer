@@ -63,7 +63,7 @@ textarea {
 .template {display:none;}
 body {
 
-    background: #333;
+    background: #000;
     background-size:100%;
     background-position: fixed;
 }
@@ -98,15 +98,16 @@ header {
     
 }
 .video-item {
-     width: 800px;
+     width: 80%;
      float:left;
-     background: #fff;
+     color:#fff;
+     background: rgba(0,0,0,.3);
     margin: 1em 2em;
     position:absolute;
     left:110%;
-    top:20%;
+    bottom:0%;
     border-radius: .15em;
-    box-shadow: 0 0 35px rgba(0,0,0,.9);
+    box-shadow: 0 0 15px rgba(0,0,0,.3);
 
 }
 .video-image {
@@ -117,15 +118,14 @@ header {
 }
 .video-link {
     font-family: 'Oswald', sans-serif;
-    width: 48%;
+    width: 50%;
     background: rgba(0,200,0,1);
     color: #fff;
     text-decoration:none;
-    float:left;
     display:block;
     text-align:center;
     padding: .5em;
-    margin: .25em 1em 1em 1em;
+    margin: .25em auto 1em auto;
     font-weight: bold;
     
     text-shadow:1px 1px 1px rgba(40,40,40,.9);
@@ -133,7 +133,7 @@ header {
     box-shadow: 1px 1px 1px rgba(100,100,100,1);
 }
 .video-link:hover,.video-link:focus {
-    background: rgba(0,100,0,1);
+    background: rgba(40,40,200,1);
     box-shadow: inset 0px 1px 1px rgba(255,255,255,.8);
     text-decoration:underline;
 }
@@ -166,18 +166,18 @@ background:url('../img/next-arrow.png')center center no-repeat rgba(255,255,255,
     font-family: 'Oswald', sans-serif;
     line-height:1.2em;
     margin: .83em .5em 0 .5em;
-    color:rgba(30,100,200,1);
+    color:#fff;
 }
 .video-speaker {
     font-family: 'Oswald', sans-serif;
-    text-align:right;
-    color:rgba(200,30,30,1);
-    margin: 0 .5em 0 0;
+    text-align:left;
+    margin: 0 .5em;
+    color:#ededed;  
 }
 .video-description {
-    margin: .5em .5em 1em 0;
-width: 42%;
-float: left;
+    margin: .5em auto 1em auto;
+width: 90%;
+
 }
 .video-counter {
     color:#aaa;

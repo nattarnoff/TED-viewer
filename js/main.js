@@ -13,9 +13,8 @@ ted.build = function(obj, inc){
   var html = $('.template').clone().removeClass('template').attr('id','video-'+inc);
   $('.video-container').append(html);
   var _v = $('#video-'+inc);
-  _v.addClass('video-item').attr('data-inc',inc)
-    .children('.video-image').attr('src', img)
-    .siblings('.video-title').text(title)
+  _v.addClass('video-item').attr('data-inc',inc).attr('data-img', img)
+    .children('.video-title').text(title)
     .siblings('.video-speaker').text(speaker)
     .siblings('.video-description').text(description)
     .siblings('.video-link').attr('href',link).text('Watch '+speaker)
@@ -38,7 +37,7 @@ ted.slide = function(moveScreen, showScreen){
           }, 1000);
       };
      
-      var bg  = $(showScreen).children('img').attr('src');
+      var bg  = $(showScreen).attr('data-img');
       $('body').css({
         background: 'url("'+bg+'") top left no-repeat',
         backgroundSize : '100%',
