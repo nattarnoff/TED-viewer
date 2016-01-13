@@ -1,4 +1,4 @@
-var url = 'http://pipes.yahoo.com/pipes/pipe.run?_id=c6b9f27dbbdfed8e30e5dc0a9b445bda&_render=json';
+var url = 'js/response.json';
 var ted = {};
 ted.build = function(obj, inc){
   var category = obj.category;
